@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\Library_Manage",
+    "\\test",
+    "\\test\\Library_Manage"
   ],
+  "SelectedNode": "\\src\\Library_Manage\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
