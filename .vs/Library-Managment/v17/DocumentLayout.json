@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Library_Manage\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Library_Manage\\Member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Library_Manage\\Book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,24 +30,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Library_Manage\\Program.cs",
+              "ToolTip": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Program.cs",
+              "RelativeToolTip": "src\\Library_Manage\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T10:44:39.669Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Member.cs",
+              "RelativeDocumentMoniker": "src\\Library_Manage\\Member.cs",
+              "ToolTip": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Member.cs",
+              "RelativeToolTip": "src\\Library_Manage\\Member.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T09:16:30.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Library_Manager.cs",
               "DocumentMoniker": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Library_Manager.cs",
               "RelativeDocumentMoniker": "src\\Library_Manage\\Library_Manager.cs",
               "ToolTip": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Library_Manager.cs",
               "RelativeToolTip": "src\\Library_Manage\\Library_Manager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA6AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T11:19:07.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Library_Section.cs",
               "DocumentMoniker": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Library_Section.cs",
               "RelativeDocumentMoniker": "src\\Library_Manage\\Library_Section.cs",
@@ -56,28 +87,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Book.cs",
               "RelativeDocumentMoniker": "src\\Library_Manage\\Book.cs",
               "ToolTip": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Book.cs",
               "RelativeToolTip": "src\\Library_Manage\\Book.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T10:47:56.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Library_Manage\\Program.cs",
-              "ToolTip": "C:\\Users\\Khan_San\\source\\repos\\Library-Managment\\src\\Library_Manage\\Program.cs",
-              "RelativeToolTip": "src\\Library_Manage\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T10:44:39.669Z",
               "EditorCaption": ""
             }
           ]

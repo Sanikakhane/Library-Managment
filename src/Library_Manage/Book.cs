@@ -10,13 +10,16 @@ namespace Library_Manage
         {
             Title = title;
             Author = author;
-            Id = Id;
+            this.Id = Id;
         }
         public abstract void showDetails();
     }
     public class Book : LibraryItem
     {
         public int pageCount;
+        public DateTime borrowDate;
+        public DateTime returnDate;
+        public bool avilable = true;
         public Book(string title,string author,int Id,int pageCount):base(title,author,Id)
         {
             pageCount = pageCount;
