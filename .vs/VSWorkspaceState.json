@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\Library_Manage",
-    "\\test",
-    "\\test\\Library_Manage"
+    ""
   ],
-  "SelectedNode": "\\src\\Library_Manage\\Member.cs",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
