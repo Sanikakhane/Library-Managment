@@ -2,35 +2,47 @@ namespace Library_Manage
 {
     public class Member
     {
-        public int Id;
-        public string member_name;
-        public string member_phone; 
-        List<Book> bookhistory =new List<Book> ();
-        public Member(int  id, string member_name, string member_phone)
+        private readonly List<Book> bookHistory = new List<Book>();
+
+        public Member(int id, string name, string phone)
         {
             Id = id;
-            this.member_name = member_name;
-            this.member_phone = member_phone;
+            Name = name;
+            Phone = phone;
         }
+
+        public int Id { get; }
+
+        public string Name { get; set; }
+
+        public string Phone { get; set; }
+
         public void borrowBook(Book book)
         {
-            bookhistory.Add(book);
-            Console.WriteLine($"The book borrowed by the {member_name} succesfully");
+            bookHistory.Add(book);
+            book.Available = false;
+            Console.WriteLine($"Book '{book.Title}' borrowed by {Name} successfully.");
         }
-        public void returnBook(int id)
+
+        public void returnBook(Book book)
         {
-            bookhistory.RemoveAt(id);
+            bookHistory.Remove(book);
+            book.Available = true;
+            Console.WriteLine($"Book '{book.Title}' returned by {Name} successfully.");
         }
+
         public void showHistory()
         {
-            foreach(var book in bookhistory)
+            Console.WriteLine($"Borrowing History for {Name}:");
+            foreach (var book in bookHistory)
             {
-                Console.WriteLine($"{book.Id}  {book.Title} {book.borrowDate} {book.returnDate}");
+                Console.WriteLine($"ID: {book.Id}, Title: {book.Title}, Borrowed: {book.BorrowDate}, Returned: {book.ReturnDate}");
             }
         }
+
         public void showDetails()
         {
-            Console.WriteLine($"Id : {Id} Name: {member_name} ");
+            Console.WriteLine($"ID: {Id}, Name: {Name}, Phone: {Phone}");
         }
     }
 }

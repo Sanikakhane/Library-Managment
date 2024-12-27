@@ -1,36 +1,50 @@
-
 namespace Library_Manage
 {
-    public abstract class LibraryItem
-    {
-        public string Title;
-        public string Author;
-        public int Id;
-        public LibraryItem(string title, string author,int Id)
-        {
-            Title = title;
-            Author = author;
-            this.Id = Id;
-        }
-        public abstract void showDetails();
-    }
     public class Book : LibraryItem
     {
-        public int pageCount;
-        public DateTime borrowDate;
-        public DateTime returnDate;
-        public bool avilable = true;
-        public Book(string title,string author,int Id) : base(title, author, Id) { }
-        public Book(string title,string author,int Id,int pageCount):base(title,author,Id)
+        private int pageCount;
+        private DateTime borrowDate;
+        private DateTime returnDate;
+        private bool available;
+
+        public Book(string title, string author, int id) : base(title, author, id)
         {
-            this.pageCount = pageCount;
+            available = true;
         }
+
+        public Book(string title, string author, int id, int pageCount) : base(title, author, id)
+        {
+            pageCount = pageCount;
+            available = true;
+        }
+
+        public int PageCount
+        {
+            get => pageCount;
+            set => pageCount = value;
+        }
+
+        public DateTime BorrowDate
+        {
+            get => borrowDate;
+            set => borrowDate = value;
+        }
+
+        public DateTime ReturnDate
+        {
+            get => returnDate;
+            set => returnDate = value;
+        }
+
+        public bool Available
+        {
+            get => available;
+            set => available = value;
+        }
+
         public override void showDetails()
         {
-            Console.WriteLine($"Book : {Title}  Author : {Author} Id : {Id}");
+            Console.WriteLine($"Book: {Title}, Author: {Author}, ID: {Id}, Available: {Available}");
         }
     }
-    
-
-    
 }
