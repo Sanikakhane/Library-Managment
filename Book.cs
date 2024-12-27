@@ -23,7 +23,7 @@ namespace Library_Manage
         public Book(string title,string author,int Id) : base(title, author, Id) { }
         public Book(string title,string author,int Id,int pageCount):base(title,author,Id)
         {
-            pageCount = pageCount;
+            this.pageCount = pageCount;
         }
         public override void showDetails()
         {

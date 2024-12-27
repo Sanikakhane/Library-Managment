@@ -8,39 +8,128 @@ namespace Library_Manage
     {
         public static void Main(string[] args)
         {
-            
             Library_Manager libraryManager = new Library_Manager();
-            LibraryItem b1 = new Book("The great nation", "Sanika", 104, 296);
-            //libraryManager.AddItem(new Book("The Great Gatsby", "Fitzgerald", 101, 200));
-            //libraryManager.AddItem(new Book("Rich dad poor dada", "Kiyosaki", 102, 250));
-            //libraryManager.AddItem(new Book("The epitom of courage", "hawkins", 103, 196));
-            //libraryManager.AddItem(b1);
-            //libraryManager.RemoveItem(102);
-            //libraryManager.showAllItems();
 
-            Book b2 = new Book("dfghnm", "dfghjkl", 105);
-            Book b3 = new Book("dfghjk", "dfghjkl", 102);
+            int memberId = 101;
+            Console.WriteLine("Choose an action:");
+            Console.WriteLine("1. Add Member");
+            Console.WriteLine("2. Remove Member");
+            Console.WriteLine("3. Show Members");
+            Console.WriteLine("4. Add Item");
+            Console.WriteLine("5. Remove Item");
+            Console.WriteLine("6. Show Items");
+            Console.WriteLine("7. Borrow Book");
+            Console.WriteLine("8. Exit");
+            Console.Write("Enter your choice: ");
+            string choice = Console.ReadLine();
 
+            switch (choice)
+            {
+                case "1":
+                    memberId++;
+                    Console.WriteLine("Enter The name");
+                    string memberName = ValidString();
+                    Console.WriteLine("Enter Phone number");
+                    string memberPhone = ValidString();
+                    var newMember = new Member(memberId, memberName, memberPhone);
+                    libraryManager.addMember(newMember);
+                    Console.WriteLine($"The Id of the member is {memberId}");
+                    break;
 
-            Member m1= new Member(1,"Sanika","985962631");
-            Member m2 = new Member(2, "asdfghjkl", "8543135132");
-            Member m3 = new Member(3, "asdfghjkl", "8543135132");
-            Member m4 = new Member(4, "asdfghjkl", "8543135132");
+                case "2":
+                    Console.WriteLine("Enter the Id of the member");
+                    int id=ValidInt();
+                    libraryManager.removeMember(id);
+                    break;
 
-            libraryManager.addMember(m1);
-            libraryManager.addMember(m2);
-            libraryManager.addMember(m3);
-            libraryManager.addMember(m4);
+                case "3":
+                    Console.WriteLine("The List of the members is ");
+                    libraryManager.showList();
+                    break;
 
-            libraryManager.removeMember(2);
-            libraryManager.showList();
+                case "4":
+                    Console.Write("Enter book Title: ");
+                    string title = ValidString();
+                    Console.Write("Enter book Author: ");
+                    string author =ValidString();
+                    Console.Write("Enter book ID: ");
+                    int itemId = ValidInt();
+                    Console.WriteLine("Enter page count of the book");
+                    int pageCount=ValidInt();
+                    libraryManager.AddItem(new Book(title, author, itemId, pageCount));
+                    break;
 
-            libraryManager.checkMember(2);
-            m1.borrowBook(b2);
-            m1.borrowBook(b3);
+                case "5":
+                    Console.Write("Enter Item ID to Remove: ");
+                    itemId = ValidInt();
+                    libraryManager.RemoveItem(itemId);
+                    break;
 
-            m1.showHistory();
+                case "6":
+                    libraryManager.showAllItems();
+                    break;
 
+                case "7":
+                    Console.Write("Enter Member ID: ");
+                    memberId = ValidInt();
+                    Console.Write("Enter Book ID: ");
+                    itemId = ValidInt();
+                    Member member = libraryManager.Members.FirstOrDefault(m => m.Id == memberId);
+                    LibraryItem book = libraryManager.Items.FirstOrDefault(b => b.Id == itemId);
+                    if (member != null && book != null)
+                    {
+                        member.borrowBook((Book)book);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Member or Book ID.");
+                    }
+                    break;
+
+                case "8":
+                    Console.WriteLine("Exiting the application.");
+                    return;
+
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+
+            }
         }
+        private static int ValidInt()
+        {
+            while (true)
+            {
+                try
+                {
+                    string input = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(input))
+                        throw new ArgumentNullException("Input cannot be null or empty.");
+                    return int.Parse(input);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid format. Please enter a valid integer.");
+                }
+            }
+        }
+        private static string ValidString()
+        {
+            while (true)
+            {
+                try
+                {
+                    string input = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(input))
+                        throw new ArgumentNullException("Input cannot be null or empty.");
+                    return input;
+                }
+                catch (ArgumentNullException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
     }
 }

@@ -14,8 +14,8 @@ namespace Library_Manage
     }
     public class Library_Manager : ImanageItem,ImanageMember
     {
-        List<LibraryItem> Items = new List<LibraryItem> ();
-        List<Member> Members = new List<Member> ();
+        public List<LibraryItem> Items = new List<LibraryItem> ();
+        public List<Member> Members = new List<Member> ();
          public void AddItem(LibraryItem item)
         {
             Items.Add (item);
